@@ -1,39 +1,38 @@
 * {
-  
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0%;
   padding: 0%;
 }
 
 body {
+  display: flexbox;
   background-color: ivory;
   justify-content: center;
 }
 
 header {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .quizbox {
-    display: flexbox;
-    justify-content: center;
+  display: block;
+  justify-content: center;
 }
 
 .questions {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .options {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-
 @media screen and (max-width: 600px) {
-    .topnav a {
-      float: none;
-      width: 100%;
-    }
-}  
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
