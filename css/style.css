@@ -18,6 +18,8 @@ header {
 .quizbox {
   display: block;
   justify-content: center;
+  position: relative;
+  border: 10px black;
 }
 
 .questions {
