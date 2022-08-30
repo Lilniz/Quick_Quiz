@@ -1,27 +1,27 @@
 var quizQuestions = [
   {
-    question_1: `What is the biggest lake within the Mississippi River?`,
-    answers: {
-      a: `Big Lake`,
-      b: `Lake St. Louis`,
-      c: `Lake Agassiz`,
-      d: `Lake Pepin`,
-    },
-    correctAnswer: `d`,
+    question: `What is the biggest lake within the Mississippi River?`,
+    choices: [
+      `Big Lake`,
+      `Lake St. Louis`,
+      `Lake Agassiz`,
+      `Lake Pepin`,
+    ],
+    answer: [`Lake Pepin`],
   },
   {
-    question_2: `What is the name of a short, yet inward-curved, sword?`,
-    answer: {
+    question: `What is the name of a short, yet inward-curved, sword?`,
+    choices: {
       a: `Kukri`,
       b: `Shortsword`,
       c: `Curved sword`,
       d: `Xiphos`,
     },
-    correctAnswer: `a`,
+    answer: `a`,
   },
   {
-    question_3: `How many spell slots do Sorcerer's get, in the most recent edition of D&D, at level 1?`,
-    answer: {
+    question: `How many spell slots do Sorcerer's get, in the most recent edition of D&D, at level 1?`,
+    choices: {
       a: `1`,
       b: `2`,
       c: `3`,
@@ -30,24 +30,24 @@ var quizQuestions = [
     correctAnswer: `b`,
   },
   {
-    question_4: `Which country is the most southern in South America?`,
-    answer: {
+    question: `Which country is the most southern in South America?`,
+    choices: {
       a: `Argentina`,
       b: `Falkland Islands`,
       c: `Antarctica`,
       d: `Chile`,
     },
-    correctAnswer: `d`
+    answer: `d`
   },
   {
-    question_5: `How many shoe laces do you have for a pair of shoes?`,
-    answer: {
+    question: `How many shoe laces do you have for a pair of shoes?`,
+    choices: {
       a: `4`,
       b: `1`,
       c: `2`,
       d: `5`,
     },
-    correctAnswer: `c`
+    answer: `c`
   },
 ];
 
@@ -61,7 +61,7 @@ var submitButton = document.getElementById('submit');
 
 
 var timeleft = 60;
-
+var questionIndex = 0;
 
 function startQuiz(questions, quizContainer, resultsContainer, submitButton) {
 
@@ -80,25 +80,12 @@ function startQuiz(questions, quizContainer, resultsContainer, submitButton) {
     }, 1000);
     
     function startQuestions(questions, quizContainer){
-        // var output = [];
-        // var answers = ``;
-
-        // for (var i = 0; i <questions.length; i++) {
-        //     answers = [];
-        //     console.log("working");
-        //     for(letter in questions[i].answers){
-        //         answers.push(
-        //             '<label>'
-        //                 + 'input type="radio" name="question'+i+'" value="'+letter+'">'
-        //                 + letter + ': '
-        //                 + questions[i].answers[letter]
-        //         );
-        //     };
-        //     output.push(
-        //         '<div class="question">' + questions[i].question + '</div>'
-        //         + '<div class="answers">' + answers.join('') + '</div>'
-        //     );
-        // };
+      document.querySelector('#questions').innerText = quizQuestions[questionIndex].question;
+      for (let i=0; i < quizQuestions[questionIndex].choices.length; i++) {
+        var button = document.createElement("button");
+        button.innerText = quizQuestions[questionIndex].choices[i];
+        document.querySelector("#choices").appendChild(button)
+      }
     };
 
     startQuestions(questions, quizContainer);
@@ -121,13 +108,10 @@ function startQuiz(questions, quizContainer, resultsContainer, submitButton) {
         }
         resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
     };
-
-    submitButton.onclick = function(){   
-        showResults(questions, quizContainer, resultsContainer);
-    };
 };
 
 startButton.onclick = function(){   
   startQuiz(quizQuestions);
+  startButton.style.display = "none";
 };
 
