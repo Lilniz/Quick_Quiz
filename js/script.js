@@ -22,12 +22,12 @@ var quizQuestions = [
   {
     question: `How many spell slots do Sorcerer's get, in the most recent edition of D&D, at level 1?`,
     choices: [
-      `1`,
-      `2`,
-      `3`,
-      `0`,
+      1,
+      2,
+      3,
+      0,
     ],
-    correctAnswer: `2`,
+    correctAnswer: 2,
   },
   {
     question: `Which country is the most southern in South America?`,
@@ -42,12 +42,12 @@ var quizQuestions = [
   {
     question: `How many shoe laces do you have for a pair of shoes?`,
     choices: [
-      `4`,
-      `1`,
-      `2`,
-      `5`,
+      4,
+      1,
+      2,
+      5,
     ],
-    answer: `2`
+    answer: 2
   },
 ];
 

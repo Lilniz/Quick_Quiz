@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quick Quiz</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <h1>Quick Quiz</h1>
-    </header>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Quiz</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <h1>Quick Quiz</h1>
+  </header>
+  <section id="container">
     <section id="quizbox">
-        <h3>Quiz Contents</h3>
-        <section id="questions">Question:</section>
-        <section id="choices">Choices:</section>
-        <button id="start">Start Quiz!</button>
-        <button id="submit">Submit</button>
-        <section id="results">Results:</section>
+      <h3>Quiz Contents:</h3>
+      <section id="questions">Question:</section>
+      <section id="choices">Choices:</section>
+      <button id="start">Start Quiz!</button>
+      <button id="submit">Submit</button>
+      <section id="results">Results:</section>
     </section>
-    
+
     <section id="countdown"></section>
 
     <section id="finish">
@@ -30,7 +32,9 @@
     </section>
 
     <section id="highscore"></section>
+  </section>
 
-    <script src="js/script.js"></script>
-  </body>
+  <script src="js/script.js"></script>
+</body>
+
 </html>

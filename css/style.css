@@ -5,35 +5,36 @@
 }
 
 body {
-  display: flexbox;
   background-color: ivory;
+}
+
+#topbar {
+  display:flex;
   justify-content: center;
 }
 
-header {
+#container {
   display: flex;
-  justify-content: space-around;
 }
 
-.quizbox {
-  display: block;
-  justify-content: center;
-  position: relative;
+#quizbox {
+  display: flex;
   border: 10px black;
 }
 
-.questions {
-  display: flex;
+#questions {
+  display:flex;
   flex-direction: column;
+  align-content: center;
 }
 
-.options {
+#options {
   display: flex;
   flex-direction: column;
 }
 
 #finish {
-  display: none;
+  display: block;
 }
 
 @media screen and (max-width: 600px) {
